@@ -1,7 +1,7 @@
 {
   "name": "@dkravec/creed-js",
-  "version": "0.0.1",
-  "description": "A light framework.",
+  "version": "0.0.2",
+  "description": "A light web framework.",
   "main": "index.js",
   "repository": {
     "type": "git",

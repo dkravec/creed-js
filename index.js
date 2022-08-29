@@ -39,7 +39,10 @@ async function buildView({ routes }) {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
-                <script type="text/javascript">
+            </head>
+            <body>
+                <div id="root">hi</div>
+                <script defer type="text/javascript">
                     const routes = ${routes};
                     // const routes = JSON.parse(routesString);
                     console.log(routes)
@@ -47,20 +50,20 @@ async function buildView({ routes }) {
                     var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
                     var pathArray = window.location.pathname.split( '/' );
                     console.log(pathArray)
-                    for (const route of routes) {
-                        console.log(route.name.toLowerCase())
-                        console.log(pathArray[1].toLowerCase())
-                        if (route.name.toLowerCase() == pathArray[1].toLowerCase()) {
-                            console.log(route + " found")
-
-                            document.getElementById('root').innerHTML=route.callback();
+                    runRoute();
+                    function runRoute() {
+                        for (const route of routes) {
+                            console.log(route.name.toLowerCase())
+                            console.log(pathArray[1].toLowerCase())
+                            if (route.name.toLowerCase() == pathArray[1].toLowerCase()) {
+                                console.log(route.callback)
+    
+                                document.getElementById('root').innerHTML=route.callback;
+                            };
                         };
                     };
                 </script>
-            </head>
-            <body>
-                <div id="root">hi</div>
-        </body>
+            </body>
         </html>
     `
 

@@ -23,3 +23,16 @@ Created August 28/29, 2022
 - Created /example, and runTest.js to have a local development to test if things work.
 - /utils/getFiles and /switchroutes
 - currently not working correctly, but on its way.
+
+## @dkravec/creed-js@0.0.2
+### 0.0.2 (2022.08.29)
+- Moved script after root div appears.
+- Makes so route's callback is before instead of after.
+- Added component test in /login.
+- Changed main page's name to just "", from "main page". (so it will render at /)
+- Updated package description.
+
+
+# Later ideas
+- get possible routes, provide to frontend, then fetch tall the possible scripts that it will need (or as it needs), then replaces the root element with that
+- For routes: have a "routes" export, and as an array. it will allow mutiple routes to lead to the same page.

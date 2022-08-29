@@ -5,7 +5,7 @@ function SwitchRoutes({ routes }) {
 
     for (const route of routes) {
         if (route.name.toLowerCase() == pathArray[2].toLowerCase()) {
-            document.getElementById('root').innerHTML=route.callback()
+            document.getElementById('root').innerHTML=route.callback
         }
     }
 }
